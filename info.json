@@ -1,0 +1,10 @@
+{
+  "name": "MtnFortressAddons",
+  "version": "1.0.7",
+  "title": "Mountain Fortress Addons",
+  "author": "Gerkiz",
+  "contact": "Gerkiz#0001",
+  "description": "For Mountain Fortress scenario.",
+  "dependencies": ["base >= 2.0.0"],
+  "factorio_version": "2.0"
+}

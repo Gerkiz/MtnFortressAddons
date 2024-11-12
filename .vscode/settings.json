@@ -1,0 +1,18 @@
+{
+  "Lua.workspace.library": [
+    ".vscode/factorio",
+    "${3rd}/bee/library"
+  ],
+  "Lua.workspace.userThirdParty": [
+    "c:\\Users\\admfs\\AppData\\Roaming\\Code\\User\\workspaceStorage\\2ea483efe538d3111c32111d971be197\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
+  ],
+  "Lua.workspace.checkThirdParty": "ApplyInMemory",
+  "factorio.versions": [
+    {
+      "name": "Space Age",
+      "factorioPath": "j:\\Factorio-SA\\bin\\x64\\factorio.exe",
+      "active": true
+    }
+  ],
+  "Lua.diagnostics.workspaceDelay": 30000
+}
