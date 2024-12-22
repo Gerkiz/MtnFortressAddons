@@ -1,5 +1,6 @@
 local Public = require 'common'
 
+require 'prototypes.planet'
 require 'prototypes.item_groups'
 require 'prototypes.decoratives'
 require 'prototypes.effects'

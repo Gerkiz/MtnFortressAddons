@@ -5,7 +5,7 @@ data:extend(
         {
             type = 'sticker',
             name = 'raw-poison-damage-sticker',
-            flags = { 'not-on-map' },
+            flags = {'not-on-map'},
             animation = {
                 filename = '__base__/graphics/entity/fire-flame/fire-flame-03.png',
                 line_length = 8,
@@ -16,12 +16,12 @@ data:extend(
                 blend_mode = 'additive',
                 animation_speed = 1,
                 scale = 0.4,
-                tint = { r = 0.1, g = 0.5, b = 0.1 }
+                tint = {r = 0.1, g = 0.5, b = 0.1}
             },
             duration_in_ticks = 30 * 60,
             damage_interval = 10,
             target_movement_modifier = 0.8,
-            damage_per_tick = { amount = 8, type = 'poison' }
+            damage_per_tick = {amount = 8, type = 'poison'}
         },
         {
             name = 'small-poison-cloud',
@@ -126,7 +126,7 @@ data:extend(
         {
             type = 'explosion',
             name = 'mtn-atton-turret-trail',
-            flags = { 'not-on-map', 'placeable-off-grid' },
+            flags = {'not-on-map', 'placeable-off-grid'},
             random_target_offset = true,
             animation_speed = 1,
             rotate = true,
@@ -140,7 +140,7 @@ data:extend(
                     frame_count = 5
                 }
             },
-            light = { intensity = 0.1, size = 20 },
+            light = {intensity = 0.1, size = 20},
             smoke = 'smoke-fast',
             smoke_count = 1,
             smoke_slow_down_factor = 1

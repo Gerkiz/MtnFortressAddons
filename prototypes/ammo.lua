@@ -16,12 +16,12 @@ function trails(ammo)
     action_delivery.target_effects = action_delivery.target_effects or {}
 
     if not action_delivery.target_effects[1] and action_delivery.target_effects.type then
-        action_delivery.target_effects = { action_delivery.target_effects }
+        action_delivery.target_effects = {action_delivery.target_effects}
     end
 
     local target_effects = action_delivery.target_effects
     if target_effects then
-        target_effects[#target_effects + 1] = { type = 'create-explosion', entity_name = 'mtn-atton-turret-trail' }
+        target_effects[#target_effects + 1] = {type = 'create-explosion', entity_name = 'mtn-atton-turret-trail'}
     end
 end
 

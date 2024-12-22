@@ -45,7 +45,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-piercing-spitter-t2',
-			health = 450,
+			health = 350,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,
@@ -88,7 +88,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-piercing-spitter-t3',
-			health = 650,
+			health = 450,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,
@@ -173,7 +173,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-acid-spitter-t2',
-			health = 450,
+			health = 350,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,
@@ -216,7 +216,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-acid-spitter-t3',
-			health = 650,
+			health = 450,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,
@@ -302,7 +302,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-explosive-spitter-t2',
-			health = 450,
+			health = 350,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,
@@ -345,7 +345,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-explosive-spitter-t3',
-			health = 650,
+			health = 450,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,
@@ -431,7 +431,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-poison-spitter-t2',
-			health = 450,
+			health = 350,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,
@@ -474,7 +474,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-poison-spitter-t3',
-			health = 650,
+			health = 450,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,
@@ -564,7 +564,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-fire-spitter-t2',
-			health = 450,
+			health = 350,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,
@@ -611,7 +611,7 @@ data:extend {
 	Public.common.create_new_spitter(
 		{
 			name = 'mtn-addon-medium-fire-spitter-t3',
-			health = 650,
+			health = 450,
 			size = 'medium',
 			healing_per_tick = 0.02,
 			damage_modifier = 29,

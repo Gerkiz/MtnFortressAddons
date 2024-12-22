@@ -21,7 +21,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-piercing-biter-t2',
-			health = 150,
+			health = 100,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
@@ -40,7 +40,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-piercing-biter-t3',
-			health = 250,
+			health = 150,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
@@ -77,7 +77,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-acid-biter-t2',
-			health = 150,
+			health = 100,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
@@ -96,7 +96,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-acid-biter-t3',
-			health = 250,
+			health = 150,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
@@ -134,7 +134,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-explosive-biter-t2',
-			health = 150,
+			health = 100,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
@@ -153,7 +153,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-explosive-biter-t3',
-			health = 250,
+			health = 150,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
@@ -191,7 +191,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-poison-biter-t2',
-			health = 150,
+			health = 100,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
@@ -210,7 +210,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-poison-biter-t3',
-			health = 250,
+			health = 150,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
@@ -249,7 +249,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-fire-biter-t2',
-			health = 150,
+			health = 100,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
@@ -269,7 +269,7 @@ data:extend {
 	Public.common.create_new_biter(
 		{
 			name = 'mtn-addon-small-fire-biter-t3',
-			health = 250,
+			health = 150,
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,

@@ -28,11 +28,11 @@ data:extend(
                                         target_effects = {
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 10, type = 'acid' }
+                                                damage = {amount = 10, type = 'acid'}
                                             },
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 2, type = 'impact' }
+                                                damage = {amount = 2, type = 'impact'}
                                             }
                                         }
                                     }
@@ -69,11 +69,11 @@ data:extend(
                                         target_effects = {
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 8, type = 'poison' }
+                                                damage = {amount = 8, type = 'poison'}
                                             },
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 2, type = 'impact' }
+                                                damage = {amount = 2, type = 'impact'}
                                             }
                                         }
                                     }
@@ -110,11 +110,11 @@ data:extend(
                                         target_effects = {
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 8, type = 'fire' }
+                                                damage = {amount = 8, type = 'fire'}
                                             },
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 2, type = 'impact' }
+                                                damage = {amount = 2, type = 'impact'}
                                             }
                                         }
                                     }
@@ -151,11 +151,11 @@ data:extend(
                                         target_effects = {
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 10, type = 'explosion' }
+                                                damage = {amount = 10, type = 'explosion'}
                                             },
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 2, type = 'impact' }
+                                                damage = {amount = 2, type = 'impact'}
                                             }
                                         }
                                     }
@@ -188,11 +188,11 @@ data:extend(
                                         target_effects = {
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 10, type = 'electric' }
+                                                damage = {amount = 10, type = 'electric'}
                                             },
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 2, type = 'impact' }
+                                                damage = {amount = 2, type = 'impact'}
                                             }
                                         }
                                     }
@@ -225,16 +225,16 @@ data:extend(
                                         target_effects = {
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 10, type = 'mtn-addon-pierce' }
+                                                damage = {amount = 10, type = 'mtn-addon-pierce'}
                                             },
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 2, type = 'impact' }
+                                                damage = {amount = 2, type = 'impact'}
                                             }
                                         }
                                     }
                                 }
-                            },
+                            }
                         }
                     }
                 }
@@ -262,19 +262,19 @@ data:extend(
                                         target_effects = {
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 3, type = 'electric' }
+                                                damage = {amount = 3, type = 'electric'}
                                             },
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 3, type = 'explosion' }
+                                                damage = {amount = 3, type = 'explosion'}
                                             },
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 3, type = 'fire' }
+                                                damage = {amount = 3, type = 'fire'}
                                             },
                                             {
                                                 type = 'damage',
-                                                damage = { amount = 2, type = 'impact' }
+                                                damage = {amount = 2, type = 'impact'}
                                             },
                                             {
                                                 type = 'create-sticker',

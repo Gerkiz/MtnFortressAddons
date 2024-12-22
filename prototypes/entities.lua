@@ -35,10 +35,12 @@ require 'prototypes.entities.containers'
 
 require 'prototypes.entities.others'
 
-
-for _, unit in pairs(data.raw["unit"]) do
-	if unit.collision_box then
-		unit.collision_box = { { -0.1, -0.1 }, { 0.1, 0.1 } }
-		unit.vision_distance = 50
-	end
+for _, unit in pairs(data.raw['unit']) do
+    if unit.collision_box then
+        unit.collision_box = {{-0.1, -0.1}, {0.1, 0.1}}
+        unit.vision_distance = 50
+    end
+    if unit.overkill_fraction then
+        unit.overkill_fraction = 0
+    end
 end
