@@ -2,13 +2,13 @@ local Public = require 'common'
 local tints = require 'utils.layers'.tints
 
 local wreckages = {
-    {name = '', tint = nil, mining_time = 2, health = 1500},
-    {name = '-1', tint = tints.red, mining_time = 2, health = 2000},
-    {name = '-2', tint = tints.yellow, mining_time = 2, health = 2500},
-    {name = '-3', tint = tints.cyan, mining_time = 2, health = 4500},
-    {name = '-4', tint = tints.steel, mining_time = 2, health = 6500},
-    {name = '-5', tint = tints.purple, mining_time = 2, health = 7500},
-    {name = '-6', tint = tints.white, mining_time = 2, health = 8500}
+    {name = '', tint = nil, mining_time = 2, health = 500},
+    {name = '-1', tint = tints.white, mining_time = 2, health = 1000},
+    {name = '-2', tint = tints.white, mining_time = 2, health = 1000},
+    {name = '-3', tint = tints.white, mining_time = 2, health = 1000},
+    {name = '-4', tint = tints.white, mining_time = 2, health = 1000},
+    {name = '-5', tint = tints.white, mining_time = 2, health = 1000},
+    {name = '-6', tint = tints.white, mining_time = 2, health = 1000}
 }
 
 for _, wreckage in pairs(wreckages) do

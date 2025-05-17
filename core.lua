@@ -2,7 +2,6 @@ local Public = require 'common'
 
 require 'prototypes.planet'
 require 'prototypes.item_groups'
-require 'prototypes.decoratives'
 require 'prototypes.effects'
 require 'prototypes.streams'
 require 'prototypes.damage_types'
@@ -13,8 +12,8 @@ require 'sounds.damage_effects'
 require 'prototypes.recipes'
 require 'prototypes.technology'
 require 'prototypes.equipment-grid'
-require 'prototypes.items'
 require 'prototypes.hotkeys'
+require 'prototypes.events'
 require 'prototypes.fire-capsule'
 
 return Public

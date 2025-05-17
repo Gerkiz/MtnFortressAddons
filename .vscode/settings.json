@@ -14,5 +14,16 @@
       "active": true
     }
   ],
-  "Lua.diagnostics.workspaceDelay": 30000
+  "Lua.diagnostics.workspaceDelay": 30000,
+  "Lua.diagnostics.globals": [
+    "mods",
+    "table_size",
+    "log",
+    "localised_print",
+    "serpent",
+    "__DebugAdapter",
+    "__Profiler",
+    "storage",
+    "character_animations"
+  ]
 }

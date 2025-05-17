@@ -27,5 +27,7 @@ end
 
 local prot_type = data.raw['ammo']
 for _, ammo in pairs(prot_type) do
-    trails(ammo)
+    if ammo.category == 'bullet' then
+        trails(ammo)
+    end
 end

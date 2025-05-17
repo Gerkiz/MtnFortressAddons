@@ -1,16 +1,11 @@
 local Public = {}
 -- Tints
-Public.biter_spawner_layer_1 = { r = 1, g = 1, b = 0, a = 1.0 }
-Public.spitter_spawner_layer_1 = { r = 1, g = 0, b = 0.5, a = 1.0 }
-Public.super_spawner_layer_1 = { r = 0, g = 0.5, b = 1, a = 1.0 }
-Public.pierce_worm_layer_1 = { r = 0.3, g = 0.6, b = 0.9, a = 1.0 }
 Public.electric_worm_layer_1 = { r = 0.9, g = 0.6, b = 0.3, a = 1.0 }
 Public.acid_worm_layer_1 = { r = 0.6, g = 0.3, b = 0.9, a = 1.0 }
 Public.explosive_worm_layer_1 = { r = 0.9, g = 0.9, b = 0.3, a = 1.0 }
 Public.poison_worm_layer_1 = { r = 0.3, g = 0.9, b = 0.6, a = 1.0 }
 Public.fire_worm_layer_1 = { r = 0.9, g = 0.3, b = 0.3, a = 1.0 }
 Public.giant_worm_layer_1 = { r = 0.3, g = 0.3, b = 0.9, a = 1 }
-Public.behemoth_worm_layer_1 = { r = 0.6, g = 0.9, b = 0.3, a = 1 }
 
 Public.layer_1 = { r = 0.2, g = 0.7, b = 0.8, a = 1 }
 Public.layer_2 = { r = 0.3, g = 0.5, b = 0.7, a = 1 }
@@ -27,7 +22,6 @@ Public.layer_12 = { r = 244, g = 20, b = 0.2, a = 1 }
 Public.layer_13 = { r = 0.4, g = 0.4, b = 0.6, a = 1 }
 Public.layer_14 = { r = 0.5, g = 0.6, b = 0.5, a = 1 }
 Public.layer_15 = { r = 0.6, g = 0.5, b = 0.4, a = 1 }
-Public.layer_16 = { r = 0.7, g = 0.3, b = 0.3, a = 1 }
 
 local tints = {
 	['red'] = { r = 1, g = 0.5, b = 0.5, a = 1 },

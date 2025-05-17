@@ -1,3 +1,4 @@
+local Common = require 'common'
 local tints = require 'utils.layers'.tints
 
 data:extend {
@@ -38,13 +39,13 @@ data:extend {
                         beam = 'laser-beam',
                         max_length = 15,
                         duration = 40,
-                        source_offset = {0, -1.31439}
+                        source_offset = { 0, -1.31439 }
                     }
                 }
             }
         },
         automatic = true,
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -86,13 +87,13 @@ data:extend {
                         beam = 'laser-beam',
                         max_length = 15,
                         duration = 40,
-                        source_offset = {0, -1.31439}
+                        source_offset = { 0, -1.31439 }
                     }
                 }
             }
         },
         automatic = true,
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -134,13 +135,13 @@ data:extend {
                         beam = 'laser-beam',
                         max_length = 15,
                         duration = 40,
-                        source_offset = {0, -1.31439}
+                        source_offset = { 0, -1.31439 }
                     }
                 }
             }
         },
         automatic = true,
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -182,13 +183,13 @@ data:extend {
                         beam = 'laser-beam',
                         max_length = 15,
                         duration = 40,
-                        source_offset = {0, -1.31439}
+                        source_offset = { 0, -1.31439 }
                     }
                 }
             }
         },
         automatic = true,
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -217,7 +218,7 @@ data:extend {
             usage_priority = 'primary-input'
         },
         energy_per_shield = '40kJ',
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -246,7 +247,7 @@ data:extend {
             usage_priority = 'primary-input'
         },
         energy_per_shield = '50kJ',
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -275,7 +276,7 @@ data:extend {
             usage_priority = 'primary-input'
         },
         energy_per_shield = '60kJ',
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -285,7 +286,6 @@ data:extend {
         name = 'battery-mk3-equipment',
         sprite = {
             filename = '__base__/graphics/equipment/battery-mk2-equipment.png',
-            tint = tints.red,
             width = 64,
             height = 128,
             priority = 'medium',
@@ -301,7 +301,7 @@ data:extend {
             buffer_capacity = '180MJ',
             usage_priority = 'tertiary'
         },
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -311,7 +311,6 @@ data:extend {
         name = 'battery-mk4-equipment',
         sprite = {
             filename = '__base__/graphics/equipment/battery-mk2-equipment.png',
-            tint = tints.yellow,
             width = 64,
             height = 128,
             priority = 'medium',
@@ -327,7 +326,7 @@ data:extend {
             buffer_capacity = '240MJ',
             usage_priority = 'tertiary'
         },
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -337,7 +336,6 @@ data:extend {
         name = 'battery-mk5-equipment',
         sprite = {
             filename = '__base__/graphics/equipment/battery-mk2-equipment.png',
-            tint = tints.steel,
             width = 64,
             height = 128,
             priority = 'medium',
@@ -353,7 +351,7 @@ data:extend {
             buffer_capacity = '300MJ',
             usage_priority = 'tertiary'
         },
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -379,7 +377,7 @@ data:extend {
             usage_priority = 'primary-output'
         },
         power = '60kW',
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -405,7 +403,7 @@ data:extend {
             usage_priority = 'primary-output'
         },
         power = '90kW',
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -431,7 +429,7 @@ data:extend {
             usage_priority = 'primary-output'
         },
         power = '1100kW',
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
 
@@ -457,6 +455,165 @@ data:extend {
             usage_priority = 'primary-output'
         },
         power = '1500kW',
-        categories = {'armor'}
+        categories = { 'armor' }
     }
 }
+
+-- BATTERY ==================================================================
+
+local battery_mk2 = data.raw['battery-equipment']['battery-mk2-equipment']
+local battery_mk2_inputs = {
+    icon_name = 'battery',
+    group = 'equipment',
+    tint = Common.tiers[2],
+    width = 64,
+    height = 128,
+}
+Common.customize_equipment(battery_mk2, battery_mk2_inputs)
+
+local battery_mk3 = data.raw['battery-equipment']['battery-mk3-equipment']
+local battery_mk3_inputs = {
+    icon_name = 'battery',
+    group = 'equipment',
+    tint = Common.tiers[3],
+    width = 64,
+    height = 128,
+}
+Common.customize_equipment(battery_mk3, battery_mk3_inputs)
+
+local battery_mk4 = data.raw['battery-equipment']['battery-mk4-equipment']
+local battery_mk4_inputs = {
+    icon_name = 'battery',
+    group = 'equipment',
+    tint = Common.tiers[4],
+    width = 64,
+    height = 128,
+}
+Common.customize_equipment(battery_mk4, battery_mk4_inputs)
+
+local battery_mk5 = data.raw['battery-equipment']['battery-mk5-equipment']
+local battery_mk5_inputs = {
+    icon_name = 'battery',
+    group = 'equipment',
+    tint = Common.tiers[5],
+    width = 64,
+    height = 128,
+}
+Common.customize_equipment(battery_mk5, battery_mk5_inputs)
+
+
+-- SHIELD ==================================================================
+
+local shield_mk3 = data.raw['energy-shield-equipment']['energy-shield-mk3-equipment']
+local shield_mk3_inputs = {
+    icon_name = 'energy-shield',
+    group = 'equipment',
+    tint = Common.tiers[3],
+    width = 128,
+    height = 128,
+}
+Common.customize_equipment(shield_mk3, shield_mk3_inputs)
+
+local shield_mk4 = data.raw['energy-shield-equipment']['energy-shield-mk4-equipment']
+local shield_mk4_inputs = {
+    icon_name = 'energy-shield',
+    group = 'equipment',
+    tint = Common.tiers[4],
+    width = 128,
+    height = 128,
+}
+Common.customize_equipment(shield_mk4, shield_mk4_inputs)
+
+local shield_mk5 = data.raw['energy-shield-equipment']['energy-shield-mk5-equipment']
+local shield_mk5_inputs = {
+    icon_name = 'energy-shield',
+    group = 'equipment',
+    tint = Common.tiers[5],
+    width = 128,
+    height = 128,
+}
+Common.customize_equipment(shield_mk5, shield_mk5_inputs)
+
+-- FISSION ==================================================================
+
+local fission_mk2 = data.raw['generator-equipment']['fission-reactor-mk2-equipment']
+local fission_mk2_inputs = {
+    icon_name = 'fission-reactor',
+    group = 'equipment',
+    tint = Common.tiers[2],
+    width = 256,
+    height = 256,
+}
+Common.customize_equipment(fission_mk2, fission_mk2_inputs)
+
+local fission_mk3 = data.raw['generator-equipment']['fission-reactor-mk3-equipment']
+local fission_mk3_inputs = {
+    icon_name = 'fission-reactor',
+    group = 'equipment',
+    tint = Common.tiers[3],
+    width = 256,
+    height = 256,
+}
+Common.customize_equipment(fission_mk3, fission_mk3_inputs)
+
+-- LASER ==================================================================
+local laser_mk2 = data.raw['active-defense-equipment']['personal-laser-defense-mk2-equipment']
+local laser_mk2_inputs = {
+    icon_name = 'laser-defense',
+    group = 'equipment',
+    tint = Common.tiers[2],
+    width = 128,
+    height = 128,
+}
+Common.customize_equipment(laser_mk2, laser_mk2_inputs)
+
+local laser_mk3 = data.raw['active-defense-equipment']['personal-laser-defense-mk3-equipment']
+local laser_mk3_inputs = {
+    icon_name = 'laser-defense',
+    group = 'equipment',
+    tint = Common.tiers[3],
+    width = 128,
+    height = 128,
+}
+Common.customize_equipment(laser_mk3, laser_mk3_inputs)
+
+local laser_mk4 = data.raw['active-defense-equipment']['personal-laser-defense-mk4-equipment']
+local laser_mk4_inputs = {
+    icon_name = 'laser-defense',
+    group = 'equipment',
+    tint = Common.tiers[4],
+    width = 128,
+    height = 128,
+}
+Common.customize_equipment(laser_mk4, laser_mk4_inputs)
+
+local laser_mk5 = data.raw['active-defense-equipment']['personal-laser-defense-mk5-equipment']
+local laser_mk5_inputs = {
+    icon_name = 'laser-defense',
+    group = 'equipment',
+    tint = Common.tiers[5],
+    width = 128,
+    height = 128,
+}
+Common.customize_equipment(laser_mk5, laser_mk5_inputs)
+
+-- SOLAR ==================================================================
+local solar_mk2 = data.raw['solar-panel-equipment']['solar-panel-mk2-equipment']
+local solar_mk2_inputs = {
+    icon_name = 'solar-panel',
+    group = 'equipment',
+    tint = Common.tiers[2],
+    width = 64,
+    height = 64,
+}
+Common.customize_equipment(solar_mk2, solar_mk2_inputs)
+
+local solar_mk3 = data.raw['solar-panel-equipment']['solar-panel-mk3-equipment']
+local solar_mk3_inputs = {
+    icon_name = 'solar-panel',
+    group = 'equipment',
+    tint = Common.tiers[3],
+    width = 64,
+    height = 64,
+}
+Common.customize_equipment(solar_mk3, solar_mk3_inputs)

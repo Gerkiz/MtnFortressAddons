@@ -10,6 +10,7 @@
       "name": "Factorio Mod Debug",
       "modsPath": "S:\\Backup\\DockerProjects\\Factorio\\Factorio Mods"
     },
+
     {
       "type": "factoriomod",
       "request": "launch",

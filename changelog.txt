@@ -1,4 +1,30 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.14
+Date: 2025-05-16
+  Updated:
+    - Fix out of bound icons
+---------------------------------------------------------------------------------------------------
+Version: 1.0.13
+Date: 2025-05-12
+  Updated:
+    - Fix out of bound icons
+---------------------------------------------------------------------------------------------------
+Version: 1.0.12
+Date: 2025-05-11
+  Updated:
+    - New function that handles teleportation from locomotive surface to the main surface
+---------------------------------------------------------------------------------------------------
+Version: 1.0.11
+Date: 2025-02-09
+  Updated:
+    - Changed default image for rocks
+    - Adjustments to scrap health
+    - Tweaked technologies
+    - Tweaked recipes
+    - Modified most of the different tiers with correct colors
+    - Modified overkill_fraction for units
+    - Other various modifications.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.10
 Date: 2024-12-22
   Updated:

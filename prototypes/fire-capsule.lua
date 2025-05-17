@@ -7,16 +7,16 @@ data:extend {
     {
         type = 'smoke-with-trigger',
         name = 'fire-cloud-visual-dummy',
-        flags = {'not-on-map'},
+        flags = { 'not-on-map' },
         hidden = true,
         show_when_smoke_off = true,
         particle_count = 24,
-        particle_spread = {3.6 * 1.05, 3.6 * 0.6 * 1.05},
+        particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 },
         particle_distance_scale_factor = 0.5,
-        particle_scale_factor = {1, 0.707},
+        particle_scale_factor = { 1, 0.707 },
         particle_duration_variation = 60 * 3,
-        wave_speed = {0.5 / 80, 0.5 / 60},
-        wave_distance = {1, 0.5},
+        wave_speed = { 0.5 / 80, 0.5 / 60 },
+        wave_distance = { 1, 0.5 },
         spread_duration_variation = 300 - 20,
         render_layer = 'object',
         affected_by_wind = false,
@@ -24,20 +24,20 @@ data:extend {
         duration = 60 * 20 + 4 * 60,
         fade_away_duration = 3 * 60,
         spread_duration = (300 - 20) / 2,
-        color = {201, 48, 48, 0.322}, -- #c93030
+        color = { 201, 48, 48, 0.322 }, -- #c93030
         animation = {
             width = 152,
             height = 120,
             line_length = 5,
             frame_count = 60,
-            shift = {-0.53125, -0.4375},
+            shift = { -0.53125, -0.4375 },
             priority = 'high',
             animation_speed = 0.25,
             filename = '__base__/graphics/entity/smoke/smoke.png',
-            flags = {'smoke'}
+            flags = { 'smoke' }
         },
         working_sound = {
-            sound = {filename = '__base__/sound/fight/poison-cloud.ogg', volume = 0.5},
+            sound = { filename = '__base__/sound/fight/poison-cloud.ogg', volume = 0.5 },
             max_sounds_per_type = 1,
             audible_distance_modifier = 0.8,
             match_volume_to_activity = true
@@ -49,15 +49,15 @@ data:extend {
     {
         name = 'fire-cloud',
         type = 'smoke-with-trigger',
-        flags = {'not-on-map'},
+        flags = { 'not-on-map' },
         hidden = true,
         show_when_smoke_off = true,
         particle_count = 16,
-        particle_spread = {3.6 * 1.05, 3.6 * 0.6 * 1.05},
+        particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 },
         particle_distance_scale_factor = 0.5,
-        particle_scale_factor = {1, 0.707},
-        wave_speed = {1 / 80, 1 / 60},
-        wave_distance = {0.3, 0.2},
+        particle_scale_factor = { 1, 0.707 },
+        wave_speed = { 1 / 80, 1 / 60 },
+        wave_distance = { 0.3, 0.2 },
         spread_duration_variation = 20,
         particle_duration_variation = 60 * 3,
         render_layer = 'object',
@@ -66,17 +66,17 @@ data:extend {
         duration = 60 * 20,
         fade_away_duration = 2 * 60,
         spread_duration = 20,
-        color = {209, 37, 37, 0.690}, -- #d12525
+        color = { 209, 37, 37, 0.690 }, -- #d12525
         animation = {
             width = 152,
             height = 120,
             line_length = 5,
             frame_count = 60,
-            shift = {-0.53125, -0.4375},
+            shift = { -0.53125, -0.4375 },
             priority = 'high',
             animation_speed = 0.25,
             filename = '__base__/graphics/entity/smoke/smoke.png',
-            flags = {'smoke'}
+            flags = { 'smoke' }
         },
         created_effect = {
             {
@@ -127,12 +127,12 @@ data:extend {
                     action = {
                         type = 'area',
                         radius = 11,
-                        entity_flags = {'breaths-air'},
+                        entity_flags = { 'breaths-air' },
                         action_delivery = {
                             type = 'instant',
                             target_effects = {
                                 type = 'damage',
-                                damage = {amount = 8, type = 'fire'}
+                                damage = { amount = 8, type = 'fire' }
                             }
                         }
                     }
@@ -147,7 +147,7 @@ data:extend {
     {
         type = 'projectile',
         name = 'fire-capsule',
-        flags = {'not-on-map'},
+        flags = { 'not-on-map' },
         hidden = true,
         acceleration = 0.005,
         action = {
@@ -169,7 +169,7 @@ data:extend {
                             initial_height = 1,
                             initial_vertical_speed = 0.1,
                             initial_vertical_speed_deviation = 0.05,
-                            offset_deviation = {{-0.1, -0.1}, {0.1, 0.1}},
+                            offset_deviation = { { -0.1, -0.1 }, { 0.1, 0.1 } },
                             speed_from_center = 0.05,
                             speed_from_center_deviation = 0.01
                         }
@@ -179,7 +179,7 @@ data:extend {
         },
         --light = {intensity = 0.5, size = 4},
         animation = {
-            filename = Public.mod_prefix .. '/graphics/icons/fire-capsule.png',
+            filename = Public.mod_prefix .. '/graphics/reskins/icons/warfare/capsules/fire-capsule.png',
             draw_as_glow = true,
             frame_count = 1,
             line_length = 8,
@@ -205,9 +205,9 @@ data:extend {
         smoke = {
             {
                 name = 'fire-smoke',
-                deviation = {0.15, 0.15},
+                deviation = { 0.15, 0.15 },
                 frequency = 1,
-                position = {0, 0},
+                position = { 0, 0 },
                 starting_frame = 3,
                 starting_frame_deviation = 5
             }
@@ -221,7 +221,7 @@ data:extend {
         name = 'fire-capsule',
         icons = {
             {
-                icon = Public.mod_prefix .. '/graphics/icons/fire-capsule.png',
+                icon = Public.mod_prefix .. '/graphics/reskins/icons/warfare/capsules/fire-capsule.png',
                 icon_size = 64,
                 icon_mipmaps = 4
             }

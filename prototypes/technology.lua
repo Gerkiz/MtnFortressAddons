@@ -1,5 +1,4 @@
 local Public = require 'common'
-local tints = require 'utils.layers'.tints
 
 data.raw["technology"]["uranium-processing"].research_trigger = nil
 data.raw["technology"]["uranium-processing"].unit =
@@ -16,8 +15,7 @@ data.raw["technology"]["uranium-processing"].unit =
 
 local steel_wall = table.deepcopy(data.raw["technology"]["stone-wall"])
 steel_wall.name = "steel-wall"
-steel_wall.icon = Public.mod_prefix .. '/graphics/technology/stone-wall.png'
-steel_wall.tint = { r = 0.5, g = 0.5, b = 0.5 }
+steel_wall.icon = Public.mod_prefix .. '/graphics/reskins/technology/warfare/reinforced-wall.png'
 steel_wall.effects[1].recipe = 'steel-wall'
 steel_wall.prerequisites = { 'steel-processing', 'military-science-pack' }
 steel_wall.unit =
@@ -35,17 +33,60 @@ steel_wall.unit =
 
 data:extend { steel_wall }
 
+local function fix_technology_color(folder, tech, tier, path, equip, size)
+	if path then
+		return {
+			{
+				icon = path,
+				icon_size = size or 256,
+				icon_mipmaps = 4,
+			}
+		}
+	end
+
+	local icons = {
+		{
+			icon = Public.mod_prefix ..
+				'/graphics/reskins/technology/' .. folder .. '/' .. tech .. '/' .. tech .. '-technology-base.png',
+			icon_size = size or 256,
+			icon_mipmaps = 4,
+		},
+		{
+			icon = Public.mod_prefix ..
+				'/graphics/reskins/technology/' .. folder .. '/' .. tech .. '/' .. tech .. '-technology-highlights.png',
+			icon_size = size or 256,
+			icon_mipmaps = 4,
+			tint = Public.tiers[tier]
+		},
+		{
+			icon = Public.mod_prefix ..
+				'/graphics/reskins/technology/' .. folder .. '/' .. tech .. '/' .. tech .. '-technology-mask.png',
+			icon_size = size or 256,
+			icon_mipmaps = 4,
+			tint = Public.tiers[tier]
+		},
+	}
+
+	if equip then
+		icons[#icons + 1] = {
+			icon = "__core__/graphics/icons/technology/constants/constant-equipment.png",
+			icon_size = 128,
+			scale = 0.5,
+			shift = { 50, 50 }
+		}
+	end
+	return icons
+end
+
+data.raw['technology']['steam-power'].icons = fix_technology_color('power', 'steam-engine', 1, nil, nil, 128)
+
+data.raw['technology']['solar-energy'].icons = fix_technology_color('power', 'solar-energy', 1)
+
 data:extend {
 	{
 		type = "technology",
 		name = "steam-power-mk2",
-		icons = {
-			{
-				icon = "__base__/graphics/technology/steam-power.png",
-				icon_size = 256, icon_mipmaps = 4,
-				tint = tints.mk2
-			},
-		},
+		icons = fix_technology_color('power', 'steam-engine', 2, nil, nil, 128),
 		prerequisites = { "steam-power" },
 		effects =
 		{
@@ -73,13 +114,7 @@ data:extend {
 	{
 		type = "technology",
 		name = "steam-power-mk3",
-		icons = {
-			{
-				icon = "__base__/graphics/technology/steam-power.png",
-				icon_size = 256, icon_mipmaps = 4,
-				tint = tints.mk3
-			},
-		},
+		icons = fix_technology_color('power', 'steam-engine', 3, nil, nil, 128),
 		prerequisites = { "steam-power-mk2" },
 		effects =
 		{
@@ -109,13 +144,7 @@ data:extend {
 	{
 		type = "technology",
 		name = "solar-energy-mk2",
-		icons = {
-			{
-				icon = "__base__/graphics/technology/solar-energy.png",
-				icon_size = 256, icon_mipmaps = 4,
-				tint = tints.mk2
-			},
-		},
+		icons = fix_technology_color('power', 'solar-energy'),
 		effects =
 		{
 			{
@@ -141,13 +170,7 @@ data:extend {
 	{
 		type = "technology",
 		name = "solar-energy-mk3",
-		icons = {
-			{
-				icon = "__base__/graphics/technology/solar-energy.png",
-				icon_size = 256, icon_mipmaps = 4,
-				tint = tints.mk3
-			},
-		},
+		icons = fix_technology_color('power', 'solar-energy'),
 		effects =
 		{
 			{
@@ -175,13 +198,7 @@ data:extend {
 		type = "technology",
 		name = "electric-energy-accumulators-mk2",
 		icon = "__base__/graphics/technology/electric-energy-acumulators.png",
-		icons = {
-			{
-				icon = "__base__/graphics/technology/electric-energy-acumulators.png",
-				icon_size = 256, icon_mipmaps = 4,
-				tint = tints.mk2
-			},
-		},
+		icons = fix_technology_color('power', 'accumulator', 2),
 		localised_name = { "technology-name.electric-energy-accumulators-2" },
 		effects =
 		{
@@ -209,13 +226,7 @@ data:extend {
 		type = "technology",
 		name = "electric-energy-accumulators-mk3",
 		icon = "__base__/graphics/technology/electric-energy-acumulators.png",
-		icons = {
-			{
-				icon = "__base__/graphics/technology/electric-energy-acumulators.png",
-				icon_size = 256, icon_mipmaps = 4,
-				tint = tints.mk3
-			},
-		},
+		icons = fix_technology_color('power', 'accumulator', 3),
 		localised_name = { "technology-name.electric-energy-accumulators-2" },
 		effects =
 		{
@@ -246,13 +257,7 @@ data:extend {
 	{
 		type = "technology",
 		name = "power-armor-mk3",
-		icons = {
-			{
-				icon = "__base__/graphics/technology/power-armor-mk2.png",
-				icon_size = 256, icon_mipmaps = 4,
-				tint = tints.red
-			},
-		},
+		icons = fix_technology_color('', '', 5, Public.mod_prefix .. '/graphics/reskins/technology/warfare/armor/power-armor-3.png'),
 		icon_size = 256,
 		effects =
 		{
@@ -282,13 +287,7 @@ data:extend {
 	{
 		type = "technology",
 		name = "power-armor-mk4",
-		icons = {
-			{
-				icon = "__base__/graphics/technology/power-armor-mk2.png",
-				icon_size = 256, icon_mipmaps = 4,
-				tint = tints.yellow
-			},
-		},
+		icons = fix_technology_color('', '', 5, Public.mod_prefix .. '/graphics/reskins/technology/warfare/armor/power-armor-4.png'),
 		icon_size = 256,
 		effects =
 		{
@@ -308,7 +307,7 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "military-science-pack",   1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}
@@ -319,13 +318,7 @@ data:extend {
 	{
 		type = "technology",
 		name = "power-armor-mk5",
-		icons = {
-			{
-				icon = "__base__/graphics/technology/power-armor-mk2.png",
-				icon_size = 256, icon_mipmaps = 4,
-				tint = tints.steel
-			},
-		},
+		icons = fix_technology_color('', '', 5, Public.mod_prefix .. '/graphics/reskins/technology/warfare/armor/power-armor-5.png'),
 		icon_size = 256,
 		effects =
 		{
@@ -345,7 +338,7 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "military-science-pack",   1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}
@@ -377,9 +370,9 @@ data:extend {
 			ingredients =
 			{
 				{ "automation-science-pack", 1 },
-				{ "logistic-science-pack", 1 },
-				{ "military-science-pack", 1 },
-				{ "chemical-science-pack", 1 },
+				{ "logistic-science-pack",   1 },
+				{ "military-science-pack",   1 },
+				{ "chemical-science-pack",   1 },
 			},
 			time = 45
 		}
@@ -387,15 +380,11 @@ data:extend {
 }
 
 
-local mk2_icons = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/personal-laser-defense-equipment.png")
-mk2_icons[1].tint = tints.red
-
 data:extend {
 	{
 		type = "technology",
 		name = "personal-laser-defense-mk2-equipment",
-		icons = mk2_icons,
+		icons = fix_technology_color('equipment', 'laser-defense', 2, nil, true),
 		prerequisites = { "personal-laser-defense-equipment", },
 		effects =
 		{
@@ -419,15 +408,12 @@ data:extend {
 		}
 	}
 }
-local mk3_icons = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/personal-laser-defense-equipment.png")
-mk3_icons[1].tint = tints.yellow
 
 data:extend {
 	{
 		type = "technology",
 		name = "personal-laser-defense-mk3-equipment",
-		icons = mk3_icons,
+		icons = fix_technology_color('equipment', 'laser-defense', 3, nil, true),
 		prerequisites = { "personal-laser-defense-mk2-equipment" },
 		effects =
 		{
@@ -446,22 +432,18 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "production-science-pack", 1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}
 	}
 }
 
-local mk4_icons = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/personal-laser-defense-equipment.png")
-mk4_icons[1].tint = tints.cyan
-
 data:extend {
 	{
 		type = "technology",
 		name = "personal-laser-defense-mk4-equipment",
-		icons = mk4_icons,
+		icons = fix_technology_color('equipment', 'laser-defense', 4, nil, true),
 		prerequisites = { "personal-laser-defense-mk3-equipment" },
 		effects =
 		{
@@ -480,21 +462,17 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "production-science-pack", 1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}
 	}
 }
-local mk5_icons = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/personal-laser-defense-equipment.png")
-mk5_icons[1].tint = tints.steel
-
 data:extend {
 	{
 		type = "technology",
 		name = "personal-laser-defense-mk5-equipment",
-		icons = mk5_icons,
+		icons = fix_technology_color('equipment', 'laser-defense', 5, nil, true),
 		prerequisites = { "personal-laser-defense-mk4-equipment" },
 		effects =
 		{
@@ -513,22 +491,18 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "production-science-pack", 1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}
 	}
 }
 
-local es_mk3 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/energy-shield-mk2-equipment.png")
-es_mk3[1].tint = tints.red
-
 data:extend {
 	{
 		type = "technology",
 		name = "energy-shield-mk3-equipment",
-		icons = es_mk3,
+		icons = fix_technology_color('equipment', 'energy-shield', 3, nil, true),
 		prerequisites = { "energy-shield-mk2-equipment" },
 		effects =
 		{
@@ -553,15 +527,11 @@ data:extend {
 	}
 }
 
-local es_mk4 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/energy-shield-mk2-equipment.png")
-es_mk4[1].tint = tints.yellow
-
 data:extend {
 	{
 		type = "technology",
 		name = "energy-shield-mk4-equipment",
-		icons = es_mk4,
+		icons = fix_technology_color('equipment', 'energy-shield', 4, nil, true),
 		prerequisites = { "energy-shield-mk3-equipment" },
 		effects =
 		{
@@ -580,22 +550,18 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "military-science-pack",   1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}
 	}
 }
 
-local es_mk5 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/energy-shield-mk2-equipment.png")
-es_mk5[1].tint = tints.steel
-
 data:extend {
 	{
 		type = "technology",
 		name = "energy-shield-mk5-equipment",
-		icons = es_mk5,
+		icons = fix_technology_color('equipment', 'energy-shield', 5, nil, true),
 		prerequisites = { "energy-shield-mk4-equipment" },
 		effects =
 		{
@@ -614,22 +580,20 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "military-science-pack",   1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}
 	}
 }
 
-local b_mk3 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/battery-mk2-equipment.png")
-b_mk3[1].tint = tints.red
+data.raw['technology']['battery-mk2-equipment'].icons = fix_technology_color('equipment', 'battery', 2, nil, true)
 
 data:extend {
 	{
 		type = "technology",
 		name = "battery-mk3-equipment",
-		icons = b_mk3,
+		icons = fix_technology_color('equipment', 'battery', 3, nil, true),
 		prerequisites = { "battery-mk2-equipment", },
 		effects =
 		{
@@ -653,15 +617,11 @@ data:extend {
 	}
 }
 
-local b_mk4 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/battery-mk2-equipment.png")
-b_mk4[1].tint = tints.yellow
-
 data:extend {
 	{
 		type = "technology",
 		name = "battery-mk4-equipment",
-		icons = b_mk4,
+		icons = fix_technology_color('equipment', 'battery', 4, nil, true),
 		prerequisites = { "battery-mk3-equipment", },
 		effects =
 		{
@@ -679,22 +639,18 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "military-science-pack",   1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}
 	}
 }
 
-local b_mk5 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/battery-mk2-equipment.png")
-b_mk5[1].tint = tints.steel
-
 data:extend {
 	{
 		type = "technology",
 		name = "battery-mk5-equipment",
-		icons = b_mk5,
+		icons = fix_technology_color('equipment', 'battery', 5, nil, true),
 		prerequisites = { "battery-mk4-equipment", },
 		effects =
 		{
@@ -712,22 +668,18 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "military-science-pack",   1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}
 	}
 }
 
-local sp_mk2 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/solar-panel-equipment.png")
-sp_mk2[1].tint = tints.red
-
 data:extend {
 	{
 		type = "technology",
 		name = "solar-panel-mk2-equipment",
-		icons = sp_mk2,
+		icons = fix_technology_color('equipment', 'solar-panel', 2, nil, true),
 		prerequisites = { "solar-panel-equipment", },
 		effects =
 		{
@@ -745,15 +697,11 @@ data:extend {
 	}
 }
 
-local sp_mk3 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/solar-panel-equipment.png")
-sp_mk3[1].tint = tints.yellow
-
 data:extend {
 	{
 		type = "technology",
 		name = "solar-panel-mk3-equipment",
-		icons = sp_mk3,
+		icons = fix_technology_color('equipment', 'solar-panel', 3, nil, true),
 		prerequisites = { "solar-panel-mk2-equipment", },
 		effects =
 		{
@@ -770,22 +718,21 @@ data:extend {
 				{ "logistic-science-pack",   1 },
 				{ "chemical-science-pack",   1 },
 				{ "military-science-pack",   1 },
-				{ "production-science-pack",   1 },
+				{ "production-science-pack", 1 },
 			},
 			time = 15
 		}
 	}
 }
 
-local fr_mk2 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/fission-reactor-equipment.png")
-fr_mk2[1].tint = tints.red
+data.raw['technology']['fission-reactor-equipment'].icons = fix_technology_color('equipment', 'fission-reactor', 1, nil,
+	true)
 
 data:extend {
 	{
 		type = "technology",
 		name = "fission-reactor-mk2-equipment",
-		icons = fr_mk2,
+		icons = fix_technology_color('equipment', 'fission-reactor', 2, nil, true),
 		prerequisites = { "utility-science-pack", "power-armor", "military-science-pack", "nuclear-power" },
 		effects =
 		{
@@ -810,15 +757,11 @@ data:extend {
 	}
 }
 
-local fr_mk3 = util.technology_icon_constant_equipment(
-	"__base__/graphics/technology/fission-reactor-equipment.png")
-fr_mk3[1].tint = tints.yellow
-
 data:extend {
 	{
 		type = "technology",
 		name = "fission-reactor-mk3-equipment",
-		icons = fr_mk3,
+		icons = fix_technology_color('equipment', 'fission-reactor', 3, nil, true),
 		prerequisites = { "fission-reactor-mk2-equipment" },
 		effects =
 		{
@@ -837,7 +780,7 @@ data:extend {
 				{ "chemical-science-pack",   1 },
 				{ "production-science-pack", 1 },
 				{ "utility-science-pack",    1 },
-				{ "space-science-pack",    1 },
+				{ "space-science-pack",      1 },
 			},
 			time = 30
 		}

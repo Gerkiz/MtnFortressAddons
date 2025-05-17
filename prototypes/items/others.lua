@@ -1,4 +1,4 @@
-local tints = require 'utils.layers'.tints
+local Common = require 'common'
 local item_sounds = require('__base__.prototypes.item_sounds')
 local item_tints = require('__base__.prototypes.item-tints')
 
@@ -7,7 +7,6 @@ data:extend {
         type = 'item',
         name = 'boiler-mk2',
         icon = '__base__/graphics/icons/boiler.png',
-        tint = tints.red,
         subgroup = 'energy',
         order = 'b[steam-power]-a[boiler]',
         inventory_move_sound = item_sounds.steam_inventory_move,
@@ -21,7 +20,6 @@ data:extend {
         type = 'item',
         name = 'boiler-mk3',
         icon = '__base__/graphics/icons/boiler.png',
-        tint = tints.yellow,
         subgroup = 'energy',
         order = 'b[steam-power]-a[boiler]',
         inventory_move_sound = item_sounds.steam_inventory_move,
@@ -35,7 +33,6 @@ data:extend {
         type = 'item',
         name = 'steam-engine-mk2',
         icon = '__base__/graphics/icons/steam-engine.png',
-        tint = tints.red,
         subgroup = 'energy',
         order = 'b[steam-power]-b[steam-engine]',
         inventory_move_sound = item_sounds.steam_inventory_move,
@@ -49,7 +46,6 @@ data:extend {
         type = 'item',
         name = 'steam-engine-mk3',
         icon = '__base__/graphics/icons/steam-engine.png',
-        tint = tints.yellow,
         subgroup = 'energy',
         order = 'b[steam-power]-b[steam-engine]',
         inventory_move_sound = item_sounds.steam_inventory_move,
@@ -63,7 +59,6 @@ data:extend {
         type = 'item',
         name = 'solar-panel-mk2',
         icon = '__base__/graphics/icons/solar-panel.png',
-        tint = tints.red,
         subgroup = 'energy',
         order = 'd[solar-panel]-a[solar-panel]',
         inventory_move_sound = item_sounds.electric_large_inventory_move,
@@ -76,7 +71,6 @@ data:extend {
         type = 'item',
         name = 'solar-panel-mk3',
         icon = '__base__/graphics/icons/solar-panel.png',
-        tint = tints.yellow,
         subgroup = 'energy',
         order = 'd[solar-panel]-a[solar-panel]',
         inventory_move_sound = item_sounds.electric_large_inventory_move,
@@ -89,7 +83,6 @@ data:extend {
         type = 'item',
         name = 'accumulator-mk2',
         icon = '__base__/graphics/icons/accumulator.png',
-        tint = tints.red,
         subgroup = 'energy',
         order = 'e[accumulator]-a[accumulator]',
         inventory_move_sound = item_sounds.electric_large_inventory_move,
@@ -102,7 +95,6 @@ data:extend {
         type = 'item',
         name = 'accumulator-mk3',
         icon = '__base__/graphics/icons/accumulator.png',
-        tint = tints.yellow,
         subgroup = 'energy',
         order = 'e[accumulator]-a[accumulator]',
         inventory_move_sound = item_sounds.electric_large_inventory_move,
@@ -112,3 +104,21 @@ data:extend {
         stack_size = 50
     }
 }
+
+local item_types = {
+    'boiler',
+    'steam-engine',
+    'solar-panel',
+    'accumulator'
+}
+
+for i = 2, 3 do
+    for _, item_type in ipairs(item_types) do
+        local inputs = {
+            icon_name = item_type,
+            group = 'power',
+            tint = Common.tiers[i]
+        }
+        Common.tint_icon_crafting_grid(item_type .. '-mk' .. i, inputs)
+    end
+end
