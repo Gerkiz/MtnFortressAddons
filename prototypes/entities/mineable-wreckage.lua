@@ -3,12 +3,12 @@ local tints = require 'utils.layers'.tints
 
 local wreckages = {
     {name = '', tint = nil, mining_time = 2, health = 500},
-    {name = '-1', tint = tints.white, mining_time = 2, health = 1000},
-    {name = '-2', tint = tints.white, mining_time = 2, health = 1000},
-    {name = '-3', tint = tints.white, mining_time = 2, health = 1000},
-    {name = '-4', tint = tints.white, mining_time = 2, health = 1000},
-    {name = '-5', tint = tints.white, mining_time = 2, health = 1000},
-    {name = '-6', tint = tints.white, mining_time = 2, health = 1000}
+    {name = '-1', tint = tints.white, mining_time = 2.2, health = 800},
+    {name = '-2', tint = tints.white, mining_time = 2.4, health = 1000},
+    {name = '-3', tint = tints.white, mining_time = 2.6, health = 1200},
+    {name = '-4', tint = tints.white, mining_time = 2.8, health = 1400},
+    {name = '-5', tint = tints.white, mining_time = 3, health = 1600},
+    {name = '-6', tint = tints.white, mining_time = 3.2, health = 1800}
 }
 
 for _, wreckage in pairs(wreckages) do
@@ -28,57 +28,64 @@ for _, wreckage in pairs(wreckages) do
                         amount_max = 5,
                         amount_min = 1,
                         name = 'stone-brick',
-                        probability = 0.2
+                        probability = 1
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'copper-plate',
-                        probability = 0.2
+                        probability = 1
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'iron-plate',
-                        probability = 0.2
+                        probability = 1
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'iron-gear-wheel',
-                        probability = 0.2
+                        probability = 1
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'solid-fuel',
-                        probability = 0.2
+                        probability = 1
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'copper-cable',
-                        probability = 0.2
+                        probability = 1
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'battery',
-                        probability = 0.2
+                        probability = 1
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'electronic-circuit',
-                        probability = 0.2
-                    }
+                        probability = 1
+                    },
+                    {
+                        type = 'item',
+                        amount_max = 5,
+                        amount_min = 1,
+                        name = 'steel-plate',
+                        probability = 1
+                    },
                 }
             },
             flags = {'placeable-neutral', 'placeable-off-grid', 'not-on-map'},
