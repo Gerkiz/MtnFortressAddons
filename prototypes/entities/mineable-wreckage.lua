@@ -28,63 +28,63 @@ for _, wreckage in pairs(wreckages) do
                         amount_max = 5,
                         amount_min = 1,
                         name = 'stone-brick',
-                        probability = 1
+                        probability = 0.2
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'copper-plate',
-                        probability = 1
+                        probability = 0.3
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'iron-plate',
-                        probability = 1
+                        probability = 0.3
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'iron-gear-wheel',
-                        probability = 1
+                        probability = 0.4
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'solid-fuel',
-                        probability = 1
+                        probability = 0.2
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'copper-cable',
-                        probability = 1
+                        probability = 0.4
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'battery',
-                        probability = 1
+                        probability = 0.2
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'electronic-circuit',
-                        probability = 1
+                        probability = 0.2
                     },
                     {
                         type = 'item',
                         amount_max = 5,
                         amount_min = 1,
                         name = 'steel-plate',
-                        probability = 1
+                        probability = 0.1
                     },
                 }
             },

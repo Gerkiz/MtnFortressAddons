@@ -34,5 +34,11 @@ data:extend {
         name = 'mtn-shift-autostash-wagon',
         key_sequence = 'SHIFT + H',
         action = 'lua'
+    },
+    {
+        type = 'custom-input',
+        name = 'on_mtn_shift_reverse_inserter',
+        key_sequence = 'SHIFT + R',
+        action = 'lua'
     }
 }
