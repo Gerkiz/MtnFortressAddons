@@ -40,7 +40,7 @@ steel_wall.icons = {
 steel_wall.place_result = 'steel-wall'
 data:extend { steel_wall }
 
-local ores = {
+local ores_misc = {
     'iron-ore',
     'copper-ore',
     'coal',
@@ -55,9 +55,10 @@ local ores = {
     'concrete',
     'landfill',
     'explosives',
+    'solid-fuel',
 }
 
-for _, ore in pairs(ores) do
+for _, ore in pairs(ores_misc) do
     data.raw['item'][ore].stack_size = 200
 end
 

@@ -1,18 +1,36 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.20
+Date: 2025-06-09
+  Changes:
+    - Tweaked tier colors for biters, resize
+    - Increased cargo-wagon inventory size
+    - Fixed fire-capsule throw animation
+    - Removed selection rectangle for warp entity
+---------------------------------------------------------------------------------------------------
+Version: 1.0.19
+Date: 2025-06-08
+  Changes:
+    - Mark streams with flag "not-on-map"
+---------------------------------------------------------------------------------------------------
+Version: 1.0.18
+Date: 2025-06-08
+  Changes:
+    - Fixes a rare issue when a worm spits out a stream and a player is teleported far away
+---------------------------------------------------------------------------------------------------
 Version: 1.0.17
 Date: 2025-06-01
   Changes:
-    - Inserters now support 15 directions. Rotation is done by the "R" key and counterclockwise with "Shift+R".
+    - Inserters now support 15 directions. Rotation is done by the "R" key and counterclockwise with "Shift+R"
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.16
 Date: 2025-05-24
   Changes:
-    - Adjusted mineable wreckage mined items.
+    - Adjusted mineable wreckage mined items
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.15
 Date: 2025-05-17
   Changes:
-    - Adjusted mineable wreckage health ratio and mined items.
+    - Adjusted mineable wreckage health ratio and mined items
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.14
 Date: 2025-05-17
@@ -55,9 +73,9 @@ Date: 2024-12-16
 Version: 1.0.8
 Date: 2024-11-13
   Updated:
-    - Add pierce and poison resistance to Power armor MK3, MK4 and MK5.
-    - Adjusted small, medium biters and spewers health.
-    - Fixed Solar panel MK3 tech prerequisites.
+    - Add pierce and poison resistance to Power armor MK3, MK4 and MK5
+    - Adjusted small, medium biters and spewers health
+    - Fixed Solar panel MK3 tech prerequisites
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.7
 Date: 2024-11-12
@@ -68,20 +86,20 @@ Version: 1.0.6
 Date: 2024-11-10
   Updated:
     - Increased ore stack size.
-    - Added description to cooked fish and grilled fish.
+    - Added description to cooked fish and grilled fish
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.5
 Date: 2024-11-10
   Updated:
     - Changed void tile look
-    - Added more MK variants of items.
-    - Added new technologies.
+    - Added more MK variants of items
+    - Added new technologies
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.4
 Date: 2024-11-05
   Updated:
     - Changed void tile look
-    - Other misc changes.
+    - Other misc changes
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.3
 Date: 2024-11-05
@@ -101,5 +119,5 @@ Date: 2024-11-05
 Version: 1.0.0
 Date: 2024-11-05
   Added:
-    - Initial commit.
+    - Initial commit
 ---------------------------------------------------------------------------------------------------

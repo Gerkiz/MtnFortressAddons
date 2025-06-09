@@ -17,4 +17,4 @@ for _, picture in pairs(steel_walls.pictures) do
     end
 end
 
-data:extend({steel_walls})
+data:extend{steel_walls}

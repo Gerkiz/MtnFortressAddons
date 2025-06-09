@@ -2,7 +2,7 @@ local Public = require 'common'
 
 data:extend(
     {
-        Public.common.create_inital_action(
+        Public.common.setup_initial_action(
             {
                 name = 'mtn-addon-acid-stream',
                 scale = 1,
@@ -43,7 +43,7 @@ data:extend(
                 }
             }
         ),
-        Public.common.create_inital_action(
+        Public.common.setup_initial_action(
             {
                 name = 'mtn-addon-poison-stream',
                 scale = 1,
@@ -84,7 +84,7 @@ data:extend(
                 }
             }
         ),
-        Public.common.create_inital_action(
+        Public.common.setup_initial_action(
             {
                 name = 'mtn-addon-fire-stream',
                 scale = 1,
@@ -125,7 +125,7 @@ data:extend(
                 }
             }
         ),
-        Public.common.create_inital_action(
+        Public.common.setup_initial_action(
             {
                 name = 'mtn-addon-explosive-stream',
                 scale = 1,
@@ -166,7 +166,7 @@ data:extend(
                 }
             }
         ),
-        Public.common.create_inital_action(
+        Public.common.setup_initial_action(
             {
                 name = 'mtn-addon-electrical-stream',
                 scale = 1,
@@ -203,7 +203,7 @@ data:extend(
                 }
             }
         ),
-        Public.common.create_inital_action(
+        Public.common.setup_initial_action(
             {
                 name = 'mtn-addon-piercing-stream',
                 scale = 1,
@@ -240,7 +240,7 @@ data:extend(
                 }
             }
         ),
-        Public.common.create_inital_action(
+        Public.common.setup_initial_action(
             {
                 name = 'mtn-addon-all-the-streams',
                 scale = 1,

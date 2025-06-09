@@ -17,7 +17,7 @@ warp.name = name
 warp.icon = Common.mod_prefix .. "/graphics/icons/warp.png"
 warp.localised_name = localised_name
 warp.trigger_radius = 1
-warp.timeout = 5 * 60
+warp.timeout = 1 * 60
 warp.max_health = 200
 warp.dying_explosion = nil
 warp.minable = nil
@@ -72,7 +72,7 @@ warp.flags =
   "not-upgradable"
 }
 warp.collision_box = { { -1, -1 }, { 1, 1 } }
-warp.selection_box = { { -1, -1 }, { 1, 1 } }
+warp.selection_box = { { 0, 0 }, { 0, 0 } }
 warp.map_color = { r = 0.5, g = 1, b = 1 }
 
 data:extend { sticker }

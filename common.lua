@@ -60,14 +60,14 @@ local function create_sprite(icon_data, scale)
 end
 
 -- Functions
-Public.common.set_worm_animations = function(entiy, scale, layer)
-    entiy.folded_animation = worm_folded_animation(scale, layer)
-    entiy.preparing_animation = worm_preparing_animation(scale, layer, 'forward')
-    entiy.prepared_animation = worm_prepared_animation(scale, layer)
-    entiy.prepared_alternative_animation = worm_prepared_alternative_animation(scale, layer)
-    entiy.starting_attack_animation = worm_start_attack_animation(scale, layer)
-    entiy.ending_attack_animation = worm_end_attack_animation(scale, layer)
-    entiy.folding_animation = worm_preparing_animation(scale, layer, 'backward')
+Public.common.set_worm_animations = function(entity, scale, layer)
+    entity.folded_animation = worm_folded_animation(scale, layer)
+    entity.preparing_animation = worm_preparing_animation(scale, layer, 'forward')
+    entity.prepared_animation = worm_prepared_animation(scale, layer)
+    entity.prepared_alternative_animation = worm_prepared_alternative_animation(scale, layer)
+    entity.starting_attack_animation = worm_start_attack_animation(scale, layer)
+    entity.ending_attack_animation = worm_end_attack_animation(scale, layer)
+    entity.folding_animation = worm_preparing_animation(scale, layer, 'backward')
 end
 
 Public.biter_ai_settings = biter_ai_settings
@@ -102,7 +102,7 @@ Public.common.create_worm_sound_effects = {
     }
 }
 
-Public.common.create_inital_action = function(data)
+Public.common.setup_initial_action = function(data)
     return {
         flags = {
             'not-on-map'
@@ -155,6 +155,7 @@ Public.common.create_inital_action = function(data)
         particle_spawn_timeout = 6,
         particle_start_alpha = 0.5,
         particle_vertical_acceleration = 0.0045000000000000009,
+        target_initial_position_only = true,
         shadow = {
             animation_speed = 1,
             draw_as_shadow = true,
@@ -485,42 +486,59 @@ end
 Public.common.create_new_biter = function(data)
     local size = 'small'
     local order = 'b-d-a'
+    local collision_box = { { -0.2, -0.2 }, { 0.2, 0.2 } }
     local pollution = 4
+    local selection_box = { { -0.5, -1.0 }, { 0.5, 0.3 } }
+    local sticker_box = { { -0.6, -0.8 }, { 0.6, 0 } }
 
     if data.size == 'medium' then
         size = 'medium'
         order = 'b-d-b'
         pollution = 25
+        selection_box = { { -0.8, -1.2 }, { 0.8, 0.5 } }
+        sticker_box = { { -0.7, -0.8 }, { 0.7, 0 } }
     end
     if data.size == 'big' then
         size = 'big'
         order = 'b-d-c'
         pollution = 100
+        selection_box = { { -0.9, -1.3 }, { 0.9, 0.6 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'huge' then
         size = 'big'
         order = 'b-d-d'
         pollution = 120
+        selection_box = { { -1, -1.4 }, { 1, 0.7 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'giant' then
         size = 'behemoth'
         order = 'b-d-e'
         pollution = 420
+        selection_box = { { -1.1, -1.5 }, { 1.1, 0.8 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'massive' then
         size = 'behemoth'
         order = 'b-d-f'
         pollution = 500
+        selection_box = { { -1.2, -1.6 }, { 1.2, 0.9 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'behemoth' then
         size = 'behemoth'
         order = 'b-d-g'
         pollution = 600
+        selection_box = { { -1.3, -1.7 }, { 1.3, 1 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'godzilla_scale' then
         size = 'behemoth'
         order = 'b-d-h'
         pollution = 700
+        selection_box = { { -1.4, -1.8 }, { 1.4, 1.1 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
 
     return {
@@ -535,9 +553,9 @@ Public.common.create_new_biter = function(data)
         resistances = data.resistances or nil,
         spawning_time_modifier = 2,
         healing_per_tick = data.healing_per_tick or 0.02,
-        collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
-        selection_box = { { -0.7, -1.5 }, { 0.7, 0.3 } },
-        sticker_box = { { -0.6, -0.8 }, { 0.6, 0 } },
+        collision_box = collision_box,
+        selection_box = selection_box,
+        sticker_box = sticker_box,
         distraction_cooldown = 300,
         min_pursue_time = 10 * 60,
         max_pursue_distance = 50,
@@ -592,42 +610,59 @@ end
 Public.common.create_new_spitter = function(data)
     local size = 'small'
     local order = 'b-d-a'
+    local collision_box = { { -0.2, -0.2 }, { 0.2, 0.2 } }
     local pollution = 4
+    local selection_box = { { -0.5, -1.0 }, { 0.5, 0.3 } }
+    local sticker_box = { { -0.6, -0.8 }, { 0.6, 0 } }
 
     if data.size == 'medium' then
         size = 'medium'
         order = 'b-d-b'
         pollution = 25
+        selection_box = { { -0.8, -1.2 }, { 0.8, 0.5 } }
+        sticker_box = { { -0.7, -0.8 }, { 0.7, 0 } }
     end
     if data.size == 'big' then
         size = 'big'
         order = 'b-d-c'
         pollution = 100
+        selection_box = { { -0.9, -1.3 }, { 0.9, 0.6 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'huge' then
         size = 'big'
         order = 'b-d-d'
         pollution = 120
+        selection_box = { { -1, -1.4 }, { 1, 0.7 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'giant' then
         size = 'behemoth'
         order = 'b-d-e'
         pollution = 420
+        selection_box = { { -1.1, -1.5 }, { 1.1, 0.8 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'massive' then
         size = 'behemoth'
         order = 'b-d-f'
         pollution = 500
+        selection_box = { { -1.2, -1.6 }, { 1.2, 0.9 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'behemoth' then
         size = 'behemoth'
         order = 'b-d-g'
         pollution = 600
+        selection_box = { { -1.3, -1.7 }, { 1.3, 1 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
     if data.size == 'godzilla_scale' then
         size = 'behemoth'
         order = 'b-d-h'
         pollution = 700
+        selection_box = { { -1.4, -1.8 }, { 1.4, 1.1 } }
+        sticker_box = { { -0.8, -0.8 }, { 0.8, 0 } }
     end
 
     return {
@@ -665,9 +700,9 @@ Public.common.create_new_spitter = function(data)
             },
         spawning_time_modifier = 2,
         healing_per_tick = data.healing_per_tick or 0.02,
-        collision_box = { { -0.4, -0.4 }, { 0.4, 0.4 } },
-        selection_box = { { -0.7, -1.5 }, { 0.7, 0.3 } },
-        sticker_box = { { -0.6, -0.8 }, { 0.6, 0 } },
+        collision_box = collision_box,
+        selection_box = selection_box,
+        sticker_box = sticker_box,
         distraction_cooldown = 300,
         min_pursue_time = 10 * 60,
         max_pursue_distance = 50,

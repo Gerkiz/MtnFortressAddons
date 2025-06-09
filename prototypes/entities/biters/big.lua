@@ -8,7 +8,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_1,
+            layer_1 = Public.tiers[1],
             layer_2 = Public.layers.layer_2,
             range = 1.8,
             resistances = {
@@ -55,7 +55,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_1,
+            layer_1 = Public.tiers[1],
             layer_2 = Public.layers.layer_2,
             range = 1.8,
             resistances = {
@@ -102,7 +102,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_1,
+            layer_1 = Public.tiers[1],
             layer_2 = Public.layers.layer_2,
             range = 1.8,
             resistances = {
@@ -149,7 +149,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_3,
+            layer_1 = Public.tiers[2],
             layer_2 = Public.layers.layer_4,
             range = 1.8,
             resistances = {
@@ -196,7 +196,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_3,
+            layer_1 = Public.tiers[2],
             layer_2 = Public.layers.layer_4,
             range = 1.8,
             resistances = {
@@ -243,7 +243,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_3,
+            layer_1 = Public.tiers[2],
             layer_2 = Public.layers.layer_4,
             range = 1.8,
             resistances = {
@@ -290,7 +290,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_5,
+            layer_1 = Public.tiers[3],
             layer_2 = Public.layers.layer_6,
             range = 1.8,
             resistances = {
@@ -337,7 +337,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_5,
+            layer_1 = Public.tiers[3],
             layer_2 = Public.layers.layer_6,
             range = 1.8,
             resistances = {
@@ -384,7 +384,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_5,
+            layer_1 = Public.tiers[3],
             layer_2 = Public.layers.layer_6,
             range = 1.8,
             resistances = {
@@ -431,7 +431,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_9,
+            layer_1 = Public.tiers[4],
             layer_2 = Public.layers.layer_10,
             range = 1.8,
             resistances = {
@@ -478,7 +478,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_9,
+            layer_1 = Public.tiers[4],
             layer_2 = Public.layers.layer_10,
             range = 1.8,
             resistances = {
@@ -525,7 +525,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_9,
+            layer_1 = Public.tiers[4],
             layer_2 = Public.layers.layer_10,
             range = 1.8,
             resistances = {
@@ -572,7 +572,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_11,
+            layer_1 = Public.tiers[5],
             layer_2 = Public.layers.layer_12,
             range = 1.8,
             resistances = {
@@ -623,7 +623,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_11,
+            layer_1 = Public.tiers[5],
             layer_2 = Public.layers.layer_12,
             range = 1.8,
             resistances = {
@@ -674,7 +674,7 @@ data:extend {
             movement_speed = 0.3,
             healing_per_tick = 0.04,
             scale = Public.scales.big_scale,
-            layer_1 = Public.layers.layer_11,
+            layer_1 = Public.tiers[5],
             layer_2 = Public.layers.layer_12,
             range = 1.8,
             resistances = {

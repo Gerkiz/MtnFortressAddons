@@ -7,7 +7,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_1,
+			layer_1 = Public.tiers[1],
 			layer_2 = Public.layers.layer_2,
 			range = 1.2,
 			target_effects = {
@@ -25,7 +25,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_1,
+			layer_1 = Public.tiers[1],
 			layer_2 = Public.layers.layer_2,
 			range = 1.2,
 
@@ -44,7 +44,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_1,
+			layer_1 = Public.tiers[1],
 			layer_2 = Public.layers.layer_2,
 			range = 1.2,
 
@@ -63,7 +63,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_3,
+			layer_1 = Public.tiers[2],
 			layer_2 = Public.layers.layer_4,
 			range = 1.2,
 			target_effects = {
@@ -81,7 +81,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_3,
+			layer_1 = Public.tiers[2],
 			layer_2 = Public.layers.layer_4,
 			range = 1.2,
 
@@ -100,7 +100,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_3,
+			layer_1 = Public.tiers[2],
 			layer_2 = Public.layers.layer_4,
 			range = 1.2,
 
@@ -119,7 +119,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_5,
+			layer_1 = Public.tiers[3],
 			layer_2 = Public.layers.layer_6,
 			range = 1.2,
 
@@ -138,7 +138,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_5,
+			layer_1 = Public.tiers[3],
 			layer_2 = Public.layers.layer_6,
 			range = 1.2,
 
@@ -157,7 +157,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_5,
+			layer_1 = Public.tiers[3],
 			layer_2 = Public.layers.layer_6,
 			range = 1.2,
 
@@ -176,7 +176,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_9,
+			layer_1 = Public.tiers[4],
 			layer_2 = Public.layers.layer_10,
 			range = 1.2,
 
@@ -195,7 +195,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_9,
+			layer_1 = Public.tiers[4],
 			layer_2 = Public.layers.layer_10,
 			range = 1.2,
 
@@ -214,7 +214,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_9,
+			layer_1 = Public.tiers[4],
 			layer_2 = Public.layers.layer_10,
 			range = 1.2,
 
@@ -233,7 +233,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_11,
+			layer_1 = Public.tiers[5],
 			layer_2 = Public.layers.layer_12,
 			range = 1.2,
 
@@ -253,7 +253,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_11,
+			layer_1 = Public.tiers[5],
 			layer_2 = Public.layers.layer_12,
 			range = 1.2,
 
@@ -273,7 +273,7 @@ data:extend {
 			size = 'small',
 			healing_per_tick = 0.02,
 			scale = Public.scales.small_scale,
-			layer_1 = Public.layers.layer_11,
+			layer_1 = Public.tiers[5],
 			layer_2 = Public.layers.layer_12,
 			range = 1.2,
 

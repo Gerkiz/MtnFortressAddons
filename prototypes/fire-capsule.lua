@@ -184,10 +184,10 @@ data:extend {
             frame_count = 1,
             line_length = 8,
             animation_speed = 0.250,
-            width = 32,
-            height = 32,
+            width = 64,
+            height = 64,
             priority = 'high',
-            scale = 0.5
+            scale = 0.3
         },
         shadow = {
             filename = '__base__/graphics/entity/poison-capsule/poison-capsule-shadow.png',
