@@ -1,6 +1,8 @@
 local Common = require 'common'
 local tints = require 'utils.layers'.tints
 
+data.raw['active-defense-equipment']['personal-laser-defense-equipment'].attack_parameters.damage_modifier = 2
+
 data:extend {
     {
         type = 'active-defense-equipment',
@@ -28,7 +30,7 @@ data:extend {
             cooldown = 40,
             range = 16,
             range_mode = 'center-to-bounding-box',
-            damage_modifier = 1.5,
+            damage_modifier = 2.2,
             ammo_category = 'laser',
             ammo_type = {
                 energy_consumption = '75kJ',
@@ -76,7 +78,7 @@ data:extend {
             cooldown = 40,
             range = 17,
             range_mode = 'center-to-bounding-box',
-            damage_modifier = 2,
+            damage_modifier = 2.5,
             ammo_category = 'laser',
             ammo_type = {
                 energy_consumption = '100kJ',
@@ -124,7 +126,7 @@ data:extend {
             cooldown = 40,
             range = 17,
             range_mode = 'center-to-bounding-box',
-            damage_modifier = 2.5,
+            damage_modifier = 2.75,
             ammo_category = 'laser',
             ammo_type = {
                 energy_consumption = '125kJ',
