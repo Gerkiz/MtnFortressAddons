@@ -733,7 +733,7 @@ data:extend {
 		type = "technology",
 		name = "fission-reactor-mk2-equipment",
 		icons = fix_technology_color('equipment', 'fission-reactor', 2, nil, true),
-		prerequisites = { "utility-science-pack", "power-armor", "military-science-pack", "nuclear-power" },
+		prerequisites = { "utility-science-pack", "power-armor", "military-science-pack", "nuclear-power", "fission-reactor-equipment" },
 		effects =
 		{
 			{
